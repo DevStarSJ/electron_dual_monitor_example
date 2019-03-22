@@ -15,6 +15,8 @@ function createWindow () {
       nodeIntegration: true
     }
   })
+  mainWindow.maximize();
+  mainWindow.setFullScreen(true);
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
@@ -48,7 +50,9 @@ app.on('ready', () => {
       x: externalDisplay.bounds.x + 50,
       y: externalDisplay.bounds.y + 50
     })
-    win.loadURL('https://github.com')
+    win.maximize();
+    win.setFullScreen(true) ;
+    win.loadURL('https://github.com');
   }
 })
 
